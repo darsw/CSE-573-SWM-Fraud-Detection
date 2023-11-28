@@ -103,17 +103,30 @@ print("Recall:", log_reg_metrics[2])
 print("F1 Score:", log_reg_metrics[3])
 print("Confusion Matrix:\n", log_reg_metrics[4])
 
-from sklearn.decomposition import PCA
-from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
-# Assuming you have already split your data into X_train_ros, X_test, y_train_ros, and y_test
+# # Initialize the SVM model
+# from sklearn.svm import SVC
+# from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
-# Initialize PCA
-pca = PCA(n_components=1) # Adjust the number of components as needed
+# svm_model = SVC()
 
-# Apply PCA to the training data
-X_train_ros_pca = pca.fit_transform(X_train_ros)
+# svm_model.fit(X_train_ros, y_train_ros)
 
-# Apply PCA to the test data
-X_test_pca = pca.transform(X_test)
+# svm_predictions = svm_model.predict(X_test)
+
+# def evaluate_model(y_true, y_pred):
+#     accuracy = accuracy_score(y_true, y_pred)
+#     precision = precision_score(y_true, y_pred)
+#     recall = recall_score(y_true, y_pred)
+#     f1 = f1_score(y_true, y_pred)
+#     confusion = confusion_matrix(y_true, y_pred)
+#     return accuracy, precision, recall, f1, confusion
+
+# svm_metrics = evaluate_model(y_test, svm_predictions)
+
+# print("\nSVM Model Evaluation Metrics after PCA:")
+# print("Accuracy:", svm_metrics[0])
+# print("Precision:", svm_metrics[1])
+# print("Recall:", svm_metrics[2])
+# print("F1 Score:", svm_metrics[3])
+# print("Confusion Matrix:\n", svm_metrics[4])
