@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Transaction Analysis</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header-title {
+            font-size: 2em;
+            margin: 0;
+        }
+        .dropdown {
+            margin: 20px 0;
+        }
+        .charts-container {
+            /* display: flex; */
+            justify-content: space-around;
+        }
+        .chart-container {
+            flex: 1;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .chart {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title">Customer Transaction Analysis</h1>
+        </header>
+
+        <div class="dropdown">
+            <label for="customer-select">Select Customer:</label>
+            <select id="customer-select">
+                <option value="'C1093826151'">Customer 'C1093826151'</option>
+            </select>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-container">
+                <div class="chart-title">Transaction Types</div>
+                <div id="piechart" class="chart"></div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="chart-title">Fraudulent vs Legitimate Transactions</div>
+                <div id="fraudchart" class="chart"></div>
+            </div> 
+        </div>   
+    </div>
+</body>
+</html>
+
