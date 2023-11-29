@@ -211,7 +211,7 @@ ORDER BY similarity DESC;
 
 
 // node cluster coefficient graph features computation
-CALL gds.localClusteringCoefficient.write('myUndirectedGraph', {
+CALL gds.localClusteringCoefficient.write('myGraph', {
     writeProperty: 'coefficientCluster'
 })
 YIELD nodePropertiesWritten, averageClusteringCoefficient;
